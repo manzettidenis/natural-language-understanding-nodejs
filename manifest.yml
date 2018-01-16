@@ -5,4 +5,4 @@ applications:
   command: npm start
   memory: 512M
   services:
-  - my-nlu-service
+  - rh360-demo
