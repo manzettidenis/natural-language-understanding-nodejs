@@ -3,6 +3,7 @@ coverage
 uploads/
 .DS_Store
 logs/
+.env
 *.log
 coverage/
 .idea
