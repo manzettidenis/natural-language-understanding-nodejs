@@ -4,7 +4,7 @@ require('dotenv').load({ silent: true });
 
 const app = require('./app.js');
 
-const port = process.env.PORT || process.env.VCAP_APP_PORT || 3000;
+const port = process.env.PORT || process.env.VCAP_APP_PORT || 5000;
 
 // Deployment tracking
 require('cf-deployment-tracker-client').track();
