@@ -119,7 +119,7 @@ const Input = React.createClass({
   render() {
     return (
       <div className={css(styles.container)}>
-        <h3 className={css(styles.header)}>Examine a news article or other content</h3>
+        <h3 className={css(styles.header)}>Examine a avaliação de um colaborador.</h3>
         <Tabs
           selected={index}
           onChange={(i) => {
@@ -156,14 +156,13 @@ const Input = React.createClass({
           style={{ visibility: this.props.language ? 'visible' : 'hidden' }}
           className={css(styles.language)}
         >{this.props.language ? languages.getLanguageName(this.props.language) : null}</p>
-        <p className={css(styles.footnote)}>For results unique to your business needs consider building a <a href="https://www.ibm.com/us-en/marketplace/supervised-machine-learning" target="_blank" rel="noopener noreferrer" >custom model</a>.</p>
         <div className={css(styles.buttonContainer)}>
           <button
             disabled={this.props.disableButton}
             className={`base--button_fill ${css(styles.button)}`}
             onClick={this.onAnalyzeClick}
           >
-              Analyze
+              Analizar
           </button>
           {this.props.error ? <ErrorMessage error={this.props.error} /> : null}
         </div>

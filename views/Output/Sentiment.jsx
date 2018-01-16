@@ -45,6 +45,24 @@ function getDataScore(props) {
   }
 }
 
+function getTextDataScore(props) {
+  try {
+    if(props > -1 && props <= -0.5) {
+      return 'Muito Ruim';
+    } else if (props > -0.5 && props  < 0) {
+      return 'Ruim';
+    } else if (props == 0 ) {
+      return 'Neutro';
+    } else if (props > 0 && props <= 0.5) {
+      return 'Bom';
+    } else {
+      return 'Muito Bom';
+    }
+  } catch (exception) {
+    return 'Problemas';
+  }
+};
+
 export default React.createClass({
   displayName: 'Sentiment',
 
@@ -107,12 +125,12 @@ export default React.createClass({
         >
           {this.props.data && this.props.data.document ? (
             <div>
-              <h4>Overall Sentiment</h4>
+              <h4>Sentimento Geral</h4>
               <Table
                 columns={['name', 'score']}
                 theme={tableTheme}
                 data={[{
-                  name: getDataScore(this.props) >= 0 ? 'Positive' : 'Negative',
+                  name: getTextDataScore(getDataScore(this.props)),
                   score: <Bar score={getDataScore(this.props)} rangeStart={-1} rangeEnd={1} />,
                 }]}
                 disableHeader

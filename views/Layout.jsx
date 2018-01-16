@@ -1,15 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Header, Jumbotron } from 'watson-react-components';
 
-const demoName = 'Natural Language Understanding';
-const DESCRIPTION = 'Natural Language Understanding is a collection of APIs that offer text analysis through natural language processing. This set of APIs can analyze text to help you understand its concepts, entities, keywords, sentiment, and more. Additionally, you can create a custom model for some APIs to get specific results that are tailored to your domain.';
+const demoName = 'SquareFive - RH360 Demo | Watson';
+const DESCRIPTION = 'A simple demo to show the power of Watson AI to RH departments of the entire world.';
 
 export default function Layout(props) {
   return (
     <html lang="en">
       <head>
-        <title>{demoName} Demo</title>
+        <title>{demoName} RH360 - Demo</title>
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -22,21 +21,11 @@ export default function Layout(props) {
         <script type="text/javascript" src="scripts/bundle.js" defer async />
       </head>
       <body>
-        <Header
-          mainBreadcrumbs={demoName}
-          mainBreadcrumbsUrl="https://www.ibm.com/watson/services/natural-language-understanding/"
-          subBreadcrumbs="Demo"
-          subBreadcrumbsUrl="https://natural-language-understanding-demo.mybluemix.net"
-        />
-        <Jumbotron
-          serviceName={demoName}
-          repository="https://github.com/watson-developer-cloud/natural-language-understanding-nodejs"
-          documentation="https://console.bluemix.net/docs/services/natural-language-understanding/getting-started.html"
-          apiReference="http://www.ibm.com/watson/developercloud/natural-language-understanding/api"
-          version="GA"
-          startInBluemix="https://console.bluemix.net/registration/?target=/catalog/services/natural-language-understanding/"
-          description={DESCRIPTION}
-        />
+        <header>
+            <h1>SquareFive</h1>
+            <span> - RH360 Watson Demo.</span>
+        </header>
+
         <div id="root">
           {props.children}
         </div>

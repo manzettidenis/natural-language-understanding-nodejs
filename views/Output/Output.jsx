@@ -16,7 +16,7 @@ const languages = lang();
 
 const styles = StyleSheet.create({
   outputSection: {
-    marginTop: '6rem',
+    marginTop: '0rem',
     maxWidth: MAX_CONTENT_WIDTH,
     paddingBottom: '3rem',
   },
@@ -41,47 +41,35 @@ function Output(props) {
       { props.data !== null && !props.loading ?
         <div className={`output-section ${css(styles.outputSection)}`}>
           <Tabs selected={0}>
-            <Pane label="Sentiment">
+            <Pane label="Sentimento">
               <Sentiment
                 data={props.data.results.sentiment}
                 language={languages.getLanguageName(props.language)}
                 query={props.query}
               />
             </Pane>
-            <Pane label="Emotion">
+            <Pane label="Emoção">
               <Emotion
                 data={props.data.results.emotion}
                 language={languages.getLanguageName(props.language)}
                 query={props.query}
               />
             </Pane>
-            <Pane label="Keywords">
+            <Pane label="Palavras-Chave">
               <Keywords
                 data={props.data.results.keywords}
                 language={languages.getLanguageName(props.language)}
               />
             </Pane>
-            <Pane label="Entities">
+            <Pane label="Entidades">
               <Entities
                 data={props.data.results.entities}
                 language={languages.getLanguageName(props.language)}
               />
             </Pane>
-            <Pane label="Categories">
+            <Pane label="Categorias">
               <Categories
                 data={props.data.results.categories}
-                language={languages.getLanguageName(props.language)}
-              />
-            </Pane>
-            <Pane label="Concept">
-              <Concept
-                data={props.data.results.concepts}
-                language={languages.getLanguageName(props.language)}
-              />
-            </Pane>
-            <Pane label="Semantic Roles">
-              <SemanticRoles
-                data={props.data.results.semantic_roles}
                 language={languages.getLanguageName(props.language)}
               />
             </Pane>
