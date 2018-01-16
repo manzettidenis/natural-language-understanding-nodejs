@@ -48,5 +48,5 @@ OutputTemplate.defaultProps = {
   data: {},
   children: {},
 };
-
+// we dont know why this fucking shit do not deploy.
 export default OutputTemplate;
